@@ -20,7 +20,7 @@ class Form extends React.Component {
           <label htmlFor="color">Color:</label>
           <input type="color" id="color" name="color" value={this.props.color} onChange={this.props.onHandleInputChange} />
         </div>
-        <button type="submit" onClick={this.props.saveMeme}>Guardar</button>
+        <button className="btn btn-primary" type="submit" onClick={this.props.saveMeme}>Guardar</button>
       </form>
     )
   }

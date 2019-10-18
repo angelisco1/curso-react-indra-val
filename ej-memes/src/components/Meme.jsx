@@ -1,17 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { delMeme } from '../store/memes/actions';
 
 const Meme = (props) => {
-  const styles = {
-    color: props.color
-  }
   return (
-    <div>
-      <p style={styles}>{props.textoArriba}</p>
+    <div className="meme">
+      <p className="arriba" style={{color: props.color}}>{props.textoArriba}</p>
       <img src={props.imagenUrl} alt=""/>
-      <p style={styles}>{props.textoAbajo}</p>
+      <p className="abajo" style={{color: props.color}}>{props.textoAbajo}</p>
+      {props.conEliminar ? <button className="btn btn-danger" type="button" onClick={() => props.delMeme(props.id)}>Eliminar</button> : null}
     </div>
   )
 }
 
+const mapDispatchToProps = {
+  delMeme
+}
 
-export default Meme;
+export default connect(null, mapDispatchToProps)(Meme);

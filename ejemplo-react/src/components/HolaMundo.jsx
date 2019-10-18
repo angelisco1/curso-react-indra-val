@@ -1,10 +1,14 @@
 import React from 'react';
 import MiPrimerComponente from './introduccion/MiPrimerComponente';
+import CicloDeVida from './ciclo-de-vida/CicloDeVida';
+import OtrasCosas from './otras-cosas/OtrasCosas';
 
 const HolaMundo = () => (
   <div>
     <h1>Hola mundo!</h1>
-    <MiPrimerComponente />
+    {/* <MiPrimerComponente /> */}
+    {/* <CicloDeVida /> */}
+    <OtrasCosas />
   </div>
 );
 
